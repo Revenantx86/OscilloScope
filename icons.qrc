@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>DTU.ico</file>
+        <file>favicon.ico</file>
+        <file>DTU_blue.ico</file>
+        <file>DTU_red-blue.ico</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

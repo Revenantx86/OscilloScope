@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1200</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/DTU_red-blue.ico</normaloff>:/icons/DTU_red-blue.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>-4</x>
+      <y>-1</y>
+      <width>1211</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>FilterWheel </string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Temperature Sensors</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>FET Control</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Debug_tab">
+     <attribute name="title">
+      <string>Debug</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>9</y>
+        <width>1171</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="100,33">
+       <item>
+        <widget class="QGroupBox" name="Console_groupBox">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="title">
+          <string>Console</string>
+         </property>
+         <widget class="QTextEdit" name="Console_textEdit">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>831</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="midLineWidth">
+           <number>0</number>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>480</x>
+            <y>560</y>
+            <width>371</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="ConsoleCommand_horizontalLayout" stretch="100,40">
+           <item>
+            <widget class="QLineEdit" name="Console_lineEdit"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ConsoleSend_pushButton">
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+               <underline>false</underline>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="text">
+              <string>Send</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="exportConsole_pushButton">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>580</y>
+            <width>131</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="text">
+           <string>Export Console</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="Debug_tabWidget">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="Commands_tab">
+          <attribute name="title">
+           <string>Commands</string>
+          </attribute>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>21</y>
+             <width>251</width>
+             <height>571</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="100,10">
+            <item>
+             <widget class="QTreeView" name="Commands_treeView">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>5</number>
+              </property>
+              <property name="animated">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="Command_buttons_horizontalLayout" stretch="0,0">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="Command_Save_pushButton">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Save </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="Command_Import_pushButton">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Connections_tab">
+          <attribute name="title">
+           <string>Connections</string>
+          </attribute>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>261</width>
+             <height>581</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="5,6">
+            <item>
+             <widget class="QGroupBox" name="TCP_Connection_groupBox">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>TCP Client</string>
+              </property>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>30</y>
+                 <width>241</width>
+                 <height>221</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="TCP_Connetcion_verticalLayout">
+                <item>
+                 <layout class="QVBoxLayout" name="TCP_ManualInput_verticalLayout">
+                  <item>
+                   <layout class="QHBoxLayout" name="TCP_ManualInput_IP_horizontalLayout">
+                    <property name="spacing">
+                     <number>22</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="TCP_ManualInput_IP_label">
+                      <property name="text">
+                       <string>IP</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="TCP_ManualInput_IP_lineEdit"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="TCP_ManualInput_Port_horizontalLayout">
+                    <item>
+                     <widget class="QLabel" name="TCP_ManualInput_Port_label">
+                      <property name="text">
+                       <string>Port</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="TCP_ManualInput_Port_lineEdit"/>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="TCP_EnableManualInput_checkBox">
+                  <property name="text">
+                   <string>Enter Manually</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="TCP_Select_verticalLayout">
+                  <item>
+                   <layout class="QHBoxLayout" name="TCP_Select_IP_horizontalLayout">
+                    <item>
+                     <widget class="QLabel" name="TCP_Select_IP_label">
+                      <property name="text">
+                       <string>IP</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="TCP_Select_IP_comboBox"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="TCP_Select_Port_horizontalLayout">
+                    <item>
+                     <widget class="QLabel" name="TCP_Select_Port_label">
+                      <property name="text">
+                       <string>Port</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="TCP_Select_Port_comboBox"/>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="TCP_Connect_pushButton">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                    <underline>false</underline>
+                    <strikeout>false</strikeout>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="SerialConnection_groupBox">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Serial Connection</string>
+              </property>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>30</y>
+                 <width>241</width>
+                 <height>261</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="SerialComboBox_ConnectBut_verticalLayout" stretch="0,0">
+                <item>
+                 <layout class="QVBoxLayout" name="SerialComboBox_verticalLayout">
+                  <item>
+                   <layout class="QHBoxLayout" name="PortName_horizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="PortName_comboBox"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="PortName_label">
+                      <property name="text">
+                       <string>Port Name</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="BaudRate_horizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="BaudRate_comboBox"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="BaudRate_label">
+                      <property name="text">
+                       <string>Baud Rate</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="DataBits_horizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="DataBits_comboBox"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="DataBits_label">
+                      <property name="text">
+                       <string>Data Bits</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="StopBits_horizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="StopBits_comboBox"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="StopBits_label">
+                      <property name="text">
+                       <string>Stop Bits</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="Parity_horizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="Parity_comboBox"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="Parity_label">
+                      <property name="text">
+                       <string>Parity</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Connect_pushButton">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Connect</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionSo">
+   <property name="text">
+    <string>connect</string>
+   </property>
+  </action>
+  <action name="actionPorts">
+   <property name="text">
+    <string>Ports</string>
+   </property>
+  </action>
+  <action name="actionBaud">
+   <property name="text">
+    <string>Baud</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

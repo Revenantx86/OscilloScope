@@ -1,0 +1,11 @@
+*detector electronics commands
+#switch-fw.temp
+#set temperature-fw.temp
+&
+*filter wheel 
+#set position-fw.pos
+#set temperature-fw.temp
+&
+*Demo Commands
+#Demo1-fw.temp
+&
